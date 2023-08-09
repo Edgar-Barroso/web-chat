@@ -1,5 +1,4 @@
-```markdown
-# Web Chat App
+## Web Chat App
 
 This is a Next.js project for a web chat application, along with its corresponding backend.
 
