@@ -1,7 +1,5 @@
-import { styled } from "styled-components";
-
+import styled from '@emotion/styled';
 export const SessionsContainer = styled.div`
-
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -11,16 +9,15 @@ export const SessionsContainer = styled.div`
     justify-content: center;
 
     div{
-
-        display: flex;
-        flex-direction: column;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .3);
+        display: grid;
+        grid-template-columns:repeat(5,1fr);
         align-items: center;
-        background-color: ${props=>props.theme['white']};
-        padding:  0px 50px 50px 50px;
-        margin: 50px;
+        background-color:${props=>props.theme['white']};
+        padding:20px;
         border-radius: 10px;
+        gap:10px;
         color:${props=>props.theme['blue-400']};
-        gap:20px;
 
     }
 `
@@ -28,9 +25,10 @@ export const SessionsContainer = styled.div`
 export const Room = styled.button`
     align-items: center;
     justify-content: center;
-    padding:30px 30px 30px 30px;
-    background: transparent;
-    border-bottom:3px solid ${props=>props.theme['gray-300']};
+    padding:10px;
+    background:${props=>props.theme['blue-400']};
+    border:3px solid ${props=>props.theme['blue-300']};
+    border-radius: 10px;
     cursor: pointer;
 
     
@@ -39,11 +37,8 @@ export const Room = styled.button`
         padding: 10px;
         font-weight: 300;
         font-size: 1.4rem;
-        color:#363636;
-    }
-    text{
-        font-size: 1rem;
-        color:#4F4F4F;
+        color:${props=>props.theme['white']};
+
     }
     &:hover{
         border-bottom:3px solid ${props=>props.theme['blue-400']};

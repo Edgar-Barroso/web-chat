@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from '@emotion/styled';
 
 export const SessionContainer = styled.div`
   flex-grow: 1;
@@ -10,55 +10,57 @@ export const SessionContainer = styled.div`
   justify-content: center;
 
   div {
-    display: flex;
-    flex-direction: column;
-    margin-left: 10%;
-    margin-right: 10%;
+    width:80%;
     height: 500px;
-    border-radius: 10px;
+    border-radius: 10px  10px  0px  0px;
     background-color: ${(props) => props.theme["white"]};
+  }
 
-    input {
-      height:5% ;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 16px;
+  input {
+      width:80%;
+      height:50px;
+      border-top: 1px solid #ccc;
+      border-radius: 0px 0px 10px 10px;
+      font-size: 1rem;
       outline: none;
       &:focus {
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
       }
     }
-  }
 `;
 
 interface MessageProps {
-  user: boolean;
+  $user: boolean;
 }
 export const Message = styled.section<MessageProps>`
   color: black;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: ${(props) => props.$user ? "row" : "row-reverse"};
+  align-items: baseline;
   gap: 10px;
-  margin: 10px;
-  text-align: center;
-
-  justify-content: ${(props) => props.user ? "baseline" : "end"};
+  justify-content: ${(props) => props.$user ? "baseline" : "end"};
   span{
-    padding: 5px;
+    ${props=>props.$user ? "text-align:end;": "text-align:base-line;"}
+    align-items: baseline;
+    width: 120px;
+    word-wrap: break-word;
+
   }
   p {
     max-width: 70%;
-    padding: 20px;
+    padding: 10px;
     word-wrap: break-word;
     border-radius: 5px;
     background: ${(props) =>
-      props.user ? props.theme["green-300"] : props.theme["gray-300"]};
+      props.$user ? props.theme["green-300"] : props.theme["gray-300"]};
   }
 `;
 
 export const MessageScreen = styled.section`
+  background-color: #e6e6e6;
+  height: 100%;
+  border-radius: 10px  10px  0px  0px;
+
   display: flex;
   flex-direction: column;
   overflow: auto;

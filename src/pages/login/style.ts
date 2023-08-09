@@ -1,5 +1,4 @@
-import { styled } from "styled-components";
-import {HiChatBubbleLeftRight} from 'react-icons/hi2'
+import styled from '@emotion/styled'
 
 
 export const LoginContainer = styled.div`
@@ -11,7 +10,8 @@ export const LoginContainer = styled.div`
 
 
   form{
-    width: 250px; 
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .3);
+    width: 250px;
     background-color: ${props=>props.theme['white']};
     border-radius: 10px;
     display: flex;
@@ -57,10 +57,10 @@ export const LoginContainer = styled.div`
       
     }
     button:hover{
-      background-color:${props=>props.theme['blue-500']}; ;
+      background-color:${props=>props.theme['blue-500']};
     }
     button:active{
-      background-color:${props=>props.theme['blue-700']}; ;
+      background-color:${props=>props.theme['blue-700']};
 
     }
 
@@ -78,9 +78,3 @@ export const LoginContainer = styled.div`
   }
 `;
 
-export const HiChatBubbleLeftRightStyled = styled(HiChatBubbleLeftRight)`
-  color:${props=>props.theme['blue-700']};
-  font-size:3rem;
-  padding: 10px;
-
-`

@@ -1,5 +1,4 @@
-import { styled } from "styled-components";
-import {BiUserPlus} from 'react-icons/bi'
+import styled from '@emotion/styled';
 
 
 export const RegisterContainer = styled.div`
@@ -12,6 +11,7 @@ export const RegisterContainer = styled.div`
 
   form{
     width: 250px; 
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .3);
     background-color: ${props=>props.theme['white']};
     border-radius: 10px;
     display: flex;
@@ -77,10 +77,3 @@ export const RegisterContainer = styled.div`
     
   }
 `;
-
-export const BiUserPlusStyled = styled(BiUserPlus)`
-  color:${props=>props.theme['blue-700']};
-  font-size:3rem;
-  padding: 10px;
-
-`
