@@ -55,5 +55,3 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Backend
 
 The corresponding backend for this application is located in the following repository: [web-chat-api](https://github.com/Edgar-Barroso/web-chat-api). Make sure to set up and run the backend before using the application.
-
-```
